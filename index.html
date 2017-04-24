@@ -1,8 +1,44 @@
 <html>
-  <head>
 
-  </head>
-  <body>
-    
-  </body>
+<head>
+    <title>Guo</title>
+    <link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $('.smooth').on('click', function() {
+            $.smoothScroll({
+                scrollElement: $('body'),
+                scrollTarget: '#' + this.id
+            });
+            return false;
+        });
+    </script>
+    <div id="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </div>
+
+    <div id="page1">
+        <a id="home" class="smooth"></a>
+        HOME
+    </div>
+
+    <div id="page2">
+        <a id="cv" class="smooth"></a>
+        CV
+    </div>
+
+    <div id="page3">
+        <a id="projects" class="smooth"></a>
+        Project
+    </div>
+</body>
+
 </html>
